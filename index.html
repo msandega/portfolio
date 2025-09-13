@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne Andega — Software Developer</title>
+    <meta name="description" content="Software developer portfolio — web apps, automation, DevOps." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Anne Andega</h1>
+            <p class="tag">Software Developer • Websites • DevOps • Automation</p>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact" class="cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-left">
+                <h2>Build fast, reliable, and maintainable web systems.</h2>
+                <p>I'm a software developer who loves automation, testing, and turning ideas into production-ready apps.
+                </p>
+                <p><a href="#projects" class="btn">View projects</a> <a href="#contact" class="btn ghost">Get in
+                        touch</a></p>
+            </div>
+            <div class="hero-right">
+                <div class="card contact-card">
+                    <h3>Open for work</h3>
+                    <p>Available to consult on web apps, DevOps pipelines, and automation.</p>
+                    <p><a href="mailto:ingato.andega@gmail.com">ingato.andega@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="container projects" id="projects">
+            <h2>Selected Projects</h2>
+            <div class="grid">
+                <article class="project">
+                    <div class="thumb" aria-hidden="true">
+                        <!-- simple SVG placeholder -->
+                        <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+                            <rect width="100%" height="100%" fill="#e9eef8"></rect>
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28">Project
+                                1</text>
+                        </svg>
+                    </div>
+                    <div class="meta">
+                        <h3>Simple Bash Scripts for Automation</h3>
+                        <p>A simple Bash script to analyze basic server performance statistics on any Linux system.
+                            The script provides a quick overview of CPU, memory, and disk usage.</p>
+                        <p class="tags">bash • top or mpstat (for CPU stats) • free (for memory stats) • df (for disk
+                            stats)</p>
+                        <p><a href="https://github.com/msandega/Simple-Bash-Scripts-for-Automation" class="link">View
+                                repo</a></p>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="thumb" aria-hidden="true">
+                        <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+                            <rect width="100%" height="100%" fill="#f8efe9"></rect>
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28">Project
+                                2</text>
+                        </svg>
+                    </div>
+                    <div class="meta">
+                        <h3>Deploy a Static Website with Docker</h3>
+                        <p>Create a simple HTML/CSS website, package it into a Docker container, and run it on a local
+                            server. This project teaches the basics of Dockerfile creation, image building, and running
+                            Docker containers.</p>
+                        <p class="tags">Bash • Python • Terraform</p>
+                        <p><a href="#" class="link">View repo</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="container" id="skills">
+            <h2>Skills</h2>
+            <div class="skill-grid">
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">Docker</div>
+                <div class="skill">Kubernetes</div>
+                <div class="skill">CI/CD</div>
+                <div class="skill">Testing</div>
+            </div>
+        </section>
+
+        <section class="container" id="about">
+            <h2>About</h2>
+            <p>I enjoy building tools that make development and operations easier. My focus is reliability,
+                observability, and testability.</p>
+        </section>
+
+        <section class="container" id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to work together or see more, email <a href="mailto:you@example.com">you@example.com</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Anne Andega — Built with HTML, CSS & Docker</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
