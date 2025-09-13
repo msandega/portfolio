@@ -12,7 +12,11 @@
 </head>
 
 <body>
-    <header>
+    <header><!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            <span class="icon">🌞</span>
+        </button>
+
         <div class="container">
             <h1>Anne Andega</h1>
             <p class="tag">Software Developer • Websites • DevOps • Automation</p>
@@ -80,8 +84,8 @@
                         <p>Create a simple HTML/CSS website, package it into a Docker container, and run it on a local
                             server. This project teaches the basics of Dockerfile creation, image building, and running
                             Docker containers.</p>
-                        <p class="tags">Bash • Python • Terraform</p>
-                        <p><a href="#" class="link">View repo</a></p>
+                        <!-- <p class="tags">Bash • Python • Terraform</p> -->
+                        <p><a href="https://github.com/msandega/portfolio" class="link">View repo</a></p>
                     </div>
                 </article>
             </div>
@@ -120,6 +124,22 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleBtn.querySelector('.icon').textContent = currentTheme === 'dark' ? '🌙' : '🌞';
+
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggleBtn.querySelector('.icon').textContent = newTheme === 'dark' ? '🌙' : '🌞';
+        });
+    </script>
+
 </body>
 
 </html>
