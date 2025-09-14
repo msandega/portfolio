@@ -211,3 +211,63 @@ body {
     background: var(--accent, #333);
     color: #fff;
 }
+
+.contactform {
+    border: 2px solid #878789;
+    border-radius: 4px;
+    padding: 15px;
+
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.9rem;
+}
+
+/* Special layout for two-column rows */
+.form-row.two-cols {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid rgba(2, 6, 23, 0.06);
+    background: transparent;
+    color: var(--text);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: center;
+    border: 0;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
